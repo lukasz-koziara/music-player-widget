@@ -1,7 +1,7 @@
 import React from 'react'
 
 const playerSongList = () => {
-    <div>Hello playersonglist</div>
-}
+    return null
+};
 
 export default playerSongList

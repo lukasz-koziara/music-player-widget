@@ -1,7 +1,63 @@
-.Prev .Next {
+.content {
+    margin: 0 auto;
+    background-color: #eeeff5;
+    width: 360px;
+    height: 142px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.controlContainer {
+    position: relative;
+    top: 47px;
 
 }
 
-.Play {
+button {
+    text-align: center;
+    color: #fff;
+    background-color: #60558f;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    padding: 0;
+}
 
+.Share {
+
+    width: 13px;
+    height: 13px;
+    border: none;
+    color: #60558f;
+    background-color: #fff;
+    margin-right: 55px;
+}
+
+.Play {
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Pause {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+.Like {
+    color: #ed5e74;
+    background-color: #ffffff;
+    width: 13px;
+    height: 13px;
+    border: none;
+    margin-left: 55px;
+}
+
+.Control:active {
+    color: #60558f;
+    background-color: #ffff;
+    border: 1px solid #60558f
 }

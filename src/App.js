@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
 import './App.css'
+import Player from './components/Player/Player'
 import PlayerViewer from "./containers/PlayerViewer/PlayerViewer"
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStepBackward } from '@fortawesome/free-solid-svg-icons'
-import { faStepForward} from '@fortawesome/free-solid-svg-icons'
-import { faPlay} from '@fortawesome/free-solid-svg-icons'
-import { faPause} from '@fortawesome/free-solid-svg-icons'
+import PlayerControls from "./components/Player/PlayerControls/PlayerControls";
 
-library.add(faStepBackward, faStepForward, faPlay, faPause)
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PlayerViewer />
+        <PlayerViewer/>
       </div>
     );
   }

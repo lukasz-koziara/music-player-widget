@@ -1,12 +1,15 @@
 import React from 'react';
-import classes from './Player.css';
-import PlayerControls from "./PlayerControls/PlayerControls";
+import './Player.css';
+import PlayerControls from '../../components/Player/PlayerControls/PlayerControls';
 
-const player = (props) => (
-        <div>
-        <div className={classes.PlayerLayout}>Hello World</div>
-        <PlayerControls {...props.children}/>
+
+const player = () => (
+
+        <div className='PlayerLayout'>
+            <PlayerControls/>
         </div>
+
+
 );
 
 export default player;

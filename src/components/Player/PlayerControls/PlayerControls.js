@@ -1,14 +1,20 @@
 import React from 'react'
-import classes from './PlayerControls.css'
-import PrevButton from "./PrevButton/PrevButton";
+import './PlayerControls.css'
+
 
 const playerControls = () => (
-        <div>
-            <PrevButton />
-            {/*<div className={classes.Play}>Play: <FontAwesomeIcon icon={"play"}/></div>*/}
-            {/*<div className={classes.Next}>Next: <FontAwesomeIcon icon={"step-forward"}/></div>*/}
+        <div className={'content'}>
+            <div className={'controlContainer'}>
+                <button className={"fas fa-share-alt Share"}></button>
+                <button className={"fas fa-step-backward Prev Control"}></button>
+                <button className={"fas fa-play Play Control"}></button>
+                <button className={"fas fa-pause Pause Control"}></button>
+                <button className={"fas fa-step-forward Next Control"}></button>
+                <button className={"fas fa-heart Like"}></button>
+            </div>
         </div>
 
-);
+    )
+;
 
-export default playerControls()
+export default playerControls
