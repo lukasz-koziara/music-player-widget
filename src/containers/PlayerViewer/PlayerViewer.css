@@ -1,5 +1,6 @@
 .PlayerLayout {
+    margin: 0 auto;
     width: 400px;
-    height: 500px;
+    height: 600px;
     background: url("../../Background.png");
 }

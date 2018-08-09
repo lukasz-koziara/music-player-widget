@@ -11,9 +11,7 @@ class PlayerViewer extends React.Component {
     return (
         <Helper>
         <Player/>
-
             <PlayerSongList/>
-
         </Helper>
     )
 }
