@@ -1,0 +1,21 @@
+.SongListBody {
+    margin: 0 auto;
+    height: 480px ;
+    width: 360px;
+    border-radius: 25px;
+    background-color: #f3f4f8;
+}
+
+.PlaylistTitle {
+    width: 360px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+.PlaylistBack {
+    width: 17px;
+    height: 17px;
+    color: #60558f;
+    background: url("./arrow.png") no-repeat;
+}

@@ -1,0 +1,8 @@
+.TitleBar {
+    margin: 0 auto;
+    background-color: rgba(42, 34, 77, 0.6);
+    width: 360px;
+    height: 65px;
+    position: relative;
+    top: 192px;
+}
