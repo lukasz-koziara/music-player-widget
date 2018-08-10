@@ -2,11 +2,11 @@ import React from 'react';
 import './PlayerUpperBar.css';
 
 const playerUpperBar = () => (
-    <div className='BarBg'>
-        <button className='Repeat'></button>
-        <button className='Shuffle'></button>
-        <button className='Refresh'></button>
-        <button className='fas fa-bars Menu'></button>
+    <div className='PlayerUpperBar-BarBg'>
+        <button className='PlayerUpperBar-Repeat'></button>
+        <button className='PlayerUpperBar-Shuffle'></button>
+        <button className='PlayerUpperBar-Refresh'></button>
+        <button className='fas fa-bars PlayerUpperBar-Menu'></button>
 
     </div>
 );

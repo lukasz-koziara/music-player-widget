@@ -1,4 +1,4 @@
-.BarBg {
+.PlayerUpperBar-BarBg {
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -10,30 +10,30 @@
     border-top-right-radius: 25px;
 }
 
-.BarBg button {
+.PlayerUpperBar-BarBg button {
     margin: auto;
     width: 17px;
     height: 17px;
 
 }
 
-.Shuffle {
+.PlayerUpperBar-Shuffle {
     background: url("./shuffle.png") no-repeat;
     border-radius: 0;
 }
 
-.Repeat {
+.PlayerUpperBar-Repeat {
     background: url("./repeat.png") no-repeat;
     border-radius: 0;
 }
 
-.Refresh {
+.PlayerUpperBar-Refresh {
     background: url("./refresh.png") no-repeat;
     border-radius: 0;
     height: 17px;
 }
 
-.Menu {
+.PlayerUpperBar-Menu {
     background: none;
     border-radius: 0;
 }

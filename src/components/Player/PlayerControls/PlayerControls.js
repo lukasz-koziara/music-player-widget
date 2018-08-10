@@ -3,14 +3,14 @@ import './PlayerControls.css'
 
 
 const playerControls = () => (
-        <div className={'content'}>
-            <div className={'controlContainer'}>
-                <button className={"fas fa-share-alt Share"}></button>
-                <button className={"fas fa-step-backward Prev Control"}></button>
-                <button className={"fas fa-play Play Control"}></button>
-                <button className={"fas fa-pause Pause Control"}></button>
-                <button className={"fas fa-step-forward Next Control"}></button>
-                <button className={"fas fa-heart Like"}></button>
+        <div className='PlayerControls-Content'>
+            <div className='PlayerControls-ControlContainer'>
+                <button className={"fas fa-share-alt PlayerControls-Share"}></button>
+                <button className={"fas fa-step-backward PlayerControls-Prev Control"}></button>
+                <button className={"fas fa-play PlayerControls-Play Control"}></button>
+                <button className={"fas fa-pause PlayerControls-Pause Control"}></button>
+                <button className={"fas fa-step-forward PlayerControls-Next Control"}></button>
+                <button className={"fas fa-heart PlayerControls-Like"}></button>
             </div>
         </div>
 

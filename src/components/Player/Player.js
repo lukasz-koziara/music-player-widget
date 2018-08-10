@@ -8,7 +8,7 @@ import PlayerSongsList from "./PlayerSongsList/PlayerSongsList";
 const player = () => (
 
     <div className='PlayerLayout'>
-        <div className='Wrapper'>
+        <div className='Player-Wrapper'>
             <PlayerRooster/>
             <PlayerControls/>
             <PlayerSongsList/>

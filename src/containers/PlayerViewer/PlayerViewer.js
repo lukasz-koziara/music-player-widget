@@ -37,7 +37,8 @@ class PlayerViewer extends React.Component {
                 "artist":"Icona Pop",
                 "duration": "3:24"
             }
-        ]
+        ],
+        isPaused: false
     };
 
     render() {
