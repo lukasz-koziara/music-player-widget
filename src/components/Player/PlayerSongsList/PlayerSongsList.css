@@ -1,65 +1,98 @@
+
 .PlayerSongList-SongListBody {
     margin: 0 auto;
     height: 480px ;
     width: 360px;
     border-radius: 25px;
     background-color: #f3f4f8;
+    position: absolute;
+    top: 0px;
+    left: 20px;
 }
 
 .PlayerSongList-PlaylistTitle {
+    text-align: start;
     width: 360px;
     height: 65px;
-    display: flex;
-    align-items: center;
+
+
+}
+
+.PlayerSongList-PlaylistTitle p {
+    margin: 0 auto;
+    position: relative;
+    bottom: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    left: 152px;
+    top: 5px;
+    color: #60558f;
 }
 
 .PlayerSongList-PlaylistBack {
     width: 17px;
     height: 17px;
     color: #60558f;
-    background: url("./arrow.png") no-repeat;
+    position: relative;
+    top: 33px;
+    left: 31px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAA6klEQVQokY3SoUuDURQF8N/nQEEGFjEqQ1gZgk1EEGyCTJNYFVZMw6b/gNX/wOLyikGTKIgIGswrAw2zmDSIRcP3Pnw8vjkPPHj3Hd65h3Nvtrt9ogRH6OCljIwxltQTOMMxslGfobLYWC/uM7jERiQ+jTe8j3KwgAcsR1w7uHnGFVaHCTRxh9k/mqzhBqeYTMkVVIdZTLAX3EzFAoeB+PqnyBK6qPAb4hOusRlZfAynhw+MR1wNn7jNkj2o4RwNzMkDLJCF7jtohbf5dA/68klclFj/xj0OUJeHup8KkM+8iUEJV2CALbz+AAJzKUCdWjySAAAAAElFTkSuQmCC) no-repeat;
 }
 
 .PlayerSongList-List {
     width: 280px;
     height: 370px;
-    /*margin-left: 27px;*/
-
 }
 
 .PlayerSongList-Song {
-    display: flex;
     width: 280px;
     height: 78px;
-    margin-left: 27px;
+    margin-left: 25px;
+    margin-right: 53px;
+    text-align: start;
 }
 
 .PlayerSongList-Divider {
     background-color: #d3d5de;
     width: 280px;
     height: 1px;
+    margin-left: 25px;
 }
 
-.PlayerSongList-Duration, .PlayerSongList-Artist {
-    font-size: 8px;
+.PlayerSongList-SongInfo {
+    float: left;
+    width: 180px;
+    height: 72px;
+}
+
+.PlayerSongList-SongControls {
+    float: right;
+    text-align: start;
+    width: 100px;
+    height: 72px;
+}
+
+.PlayerSongList-Duration-Artist {
+    width: 180px;
+    font-size: 12px;
     color: #88858f;
-    margin-top: 25px ;
+    position: relative;
+    top: 18px;
 }
 
-.PlayerSongList-Duration {
-    left: 1px;
-}
 
-.PlayerSongList-Artist {
-    left: 1px;
-}
 
 .PlayerSongList-Title {
-    font-size: 12px;
+    width: 180px;
+    font-size: 16px;
+    /*color: #60558f;*/
     color: #2f1a4b;
     position: relative;
-    top: 42px;
-    left: 1px;
+    top: 2px;
+}
+
+.PlayerSongList-Song button {
+    text-align: justify;
 }
 
 .PlayerSongList-Share {
@@ -70,8 +103,7 @@
     background-color: #fff;
     position: relative;
     top: 33px;
-    left: 240px;
-    right: 12px;
+    left:66px;
 }
 
 .PlayerSongList-Like {
@@ -82,6 +114,6 @@
     border: none;
     position: relative;
     top: 33px;
-    left: 252px;
+    left: 72px;
 }
 
