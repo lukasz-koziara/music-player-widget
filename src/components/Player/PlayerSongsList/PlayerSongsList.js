@@ -4,7 +4,7 @@ import './PlayerSongsList.css';
 import {withSongs} from "../../../contexts/Songs";
 import {Scrollbars} from 'react-custom-scrollbars';
 
-const playerSongList = (props) => (
+const PlayerSongList = (props) => (
     <Helper>
         <div className='PlayerSongList-SongListBody'>
             <div className='PlayerSongList-PlaylistTitle'>
@@ -33,4 +33,4 @@ const playerSongList = (props) => (
                     </Helper>
                     );
 
-                    export default withSongs(playerSongList)
+                    export default withSongs(PlayerSongList)
