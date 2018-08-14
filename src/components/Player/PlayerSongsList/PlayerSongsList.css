@@ -8,6 +8,7 @@
     position: absolute;
     top: 0px;
     left: 20px;
+    transition: all 0.3s ease-out;
 }
 
 .PlayerSongList-PlaylistTitle {
@@ -42,6 +43,23 @@
 .PlayerSongList-List {
     width: 280px;
     height: 370px;
+
+}
+
+.PlayerSongList-List:after
+ {
+    width: 100%;
+    height: 4.5em;
+    content  : "";
+    position : absolute;
+    z-index  : 1;
+    bottom   : 0;
+    left     : 0;
+    pointer-events   : none;
+    background-image : linear-gradient(to bottom,
+    rgba(255,255,255, 0),
+    rgba(255,255,255, 0.5) 5%);
+    border-radius: 25px;
 }
 
 .PlayerSongList-Song {
@@ -56,7 +74,8 @@
     background-color: #d3d5de;
     width: 280px;
     height: 1px;
-    margin-left: 25px;
+    position: relative;
+    top: 77px;
 }
 
 .PlayerSongList-SongInfo {

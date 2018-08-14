@@ -12,8 +12,17 @@ export class SongProvider extends React.Component {
             {id: 3, title: "Girlfriend", artist: "Icona Pop", duration: "2:50"},
             {id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07"},
             {id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24"}
-        ]
+        ],
+
 };
+
+    playlistShowHandler = () => {
+        this.setState({playlistOn: true})
+    };
+
+    playlistHideHandler = () => {
+        this.setState({playlistOn: false})
+    };
     render() {
         return (
             <SongContext.Provider value={this.state}>
