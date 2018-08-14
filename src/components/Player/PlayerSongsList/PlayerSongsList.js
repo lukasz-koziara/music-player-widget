@@ -6,9 +6,7 @@ import {Scrollbars} from 'react-custom-scrollbars';
 
 const playerSongList = (props) => (
     <Helper>
-        <div className='PlayerSongList-SongListBody' style={{transform: props.show ? 'translateY(0)' : 'translateY(-100vh)',
-            opacity: props.show ? '1': '0'
-        }}>
+        <div className='PlayerSongList-SongListBody'>
             <div className='PlayerSongList-PlaylistTitle'>
                 <button className='PlayerSongList-PlaylistBack' onClick={props.playlistOff}/>
                 <p>Playlist</p>
