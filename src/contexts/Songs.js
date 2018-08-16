@@ -13,7 +13,7 @@ export class SongProvider extends Component {
             {id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07"},
             {id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24"}
         ],
-    isExpanded: "false"
+    isExpanded: true
 };
 
     playlistShowHandler = () => {

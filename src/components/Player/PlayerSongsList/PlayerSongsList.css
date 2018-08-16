@@ -5,9 +5,10 @@
     width: 360px;
     border-radius: 25px;
     background-color: #f3f4f8;
-    position: fixed;
+    position: absolute;
+    left: 403px;
     top: 60px;
-    left: 208px;
+    z-index: 100;
 }
 
 .PlayerSongList-PlaylistTitle {

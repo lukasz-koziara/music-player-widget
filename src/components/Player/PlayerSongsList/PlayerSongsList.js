@@ -3,16 +3,16 @@ import './PlayerSongsList.css';
 import {withSongs} from "../../../contexts/Songs";
 import {Scrollbars} from 'react-custom-scrollbars';
 
+
 const PlayerSongList = (props) => (
 
         <div className='PlayerSongList-SongListBody'
              style={{
-                 transform: props.show ? 'display(block)' : '(display)none',
-                 opacity: props.show ? '1' : '0'
+                 opacity: props.isExpanded ? '1' : '0'
              }}>
             <div className='PlayerSongList-PlaylistTitle'>
                 <button className='PlayerSongList-PlaylistBack'
-                        onClick={this.props.isExpanded}/>
+                        onClick={props.playlistHideHandler}/>
                 <p>Playlist</p>
             </div>
             <div className={'PlayerSongList-List'}>
