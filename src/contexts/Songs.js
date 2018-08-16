@@ -1,28 +1,26 @@
-import React from 'react'
+import React, { Component, createContext } from 'react'
 
-const SongContext = React.createContext();
+const SongContext = createContext();
 
 export const SongConsumer = SongContext.Consumer;
 
-export class SongProvider extends React.Component {
+export class SongProvider extends Component {
     state = {
         songs: [
-            {id: 1, title: "Still Don't Know", artist: "Icona Pop", duration: "3:16"},
-            {id: 2, title: "I Love It ", artist: "Icona Pop", duration: "2:35"},
-            {id: 3, title: "Girlfriend", artist: "Icona Pop", duration: "2:50"},
-            {id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07"},
-            {id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24"}
+            { id: 1, title: "Still Don't Know", artist: "Icona Pop", duration: "3:16" },
+            { id: 2, title: "I Love It ", artist: "Icona Pop", duration: "2:35" },
+            { id: 3, title: "Girlfriend", artist: "Icona Pop", duration: "2:50" },
+            { id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07" },
+            { id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24" }
         ],
 
-};
+        songId: null,
 
-    playlistShowHandler = () => {
-        this.setState({playlistOn: true})
+        setSongId: (songId) => this.setState({ songId }),
+        nextSong: (songId) => this.setState({songId} + 1),
+        prevSong: (songId) => this.set.state({songId} - 1)
     };
 
-    playlistHideHandler = () => {
-        this.setState({playlistOn: false})
-    };
     render() {
         return (
             <SongContext.Provider value={this.state}>
@@ -38,14 +36,14 @@ export function withSongs(Component) {
             <SongConsumer>
                 {
                     propsFromContext => (
-                        <Component {...props} {...propsFromContext}/>
+                        <Component {...props} {...propsFromContext} />
                     )
                 }
             </SongConsumer>
         )
     }
 
-    SongAwareComponent.displayName = `SongAware(${Component.displayName || Component.name || 'Component'})`
+    SongAwareComponent.displayName = `SongAware(${Component.displayName || Component.name || 'Component'})`;
 
     return SongAwareComponent
 }

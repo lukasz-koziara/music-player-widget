@@ -1,15 +1,18 @@
 import React from 'react';
 import './PlayerUpperBar.css';
+import {withSongs} from "../../../contexts/Songs";
+import {withLayout} from "../../../contexts/Layout";
 
 
-const playerUpperBar = () => (
+
+const PlayerUpperBar = (props) => (
     <div className='PlayerUpperBar-BarBg'>
-        <button className='PlayerUpperBar-Repeat'></button>
-        <button className='PlayerUpperBar-Shuffle'></button>
-        <button className='PlayerUpperBar-Refresh'></button>
-        <button className='fas fa-bars PlayerUpperBar-Menu' onClick={this.tooglePlaylist}></button>
+        <button className='PlayerUpperBar-Repeat'/>
+        <button className='PlayerUpperBar-Shuffle'/>
+        <button className='PlayerUpperBar-Refresh'/>
+        <button className='fas fa-bars PlayerUpperBar-Menu' onClick={props.playlistShowHandler}/>
 
     </div>
 );
 
-export default playerUpperBar
+export default withLayout(withSongs(PlayerUpperBar))

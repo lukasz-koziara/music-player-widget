@@ -1,36 +1,27 @@
-import React from 'react';
-import Helper from '../../hoc/Helper'
-import Player from '../../components/Player/Player'
-import './PlayerViewer.css'
-import PlayerSongsList from "../../components/Player/PlayerSongsList/PlayerSongsList";
+import React, {Component} from 'react';
+import Player from '../../components/Player/Player';
+import './PlayerViewer.css';
 import {withSongs} from "../../contexts/Songs";
+import {SongProvider} from "../../contexts/Songs"
+import PlayerSongsList from "../../components/Player/PlayerSongsList/PlayerSongsList";
+import {withLayout} from "../../contexts/Layout";
 
-class PlayerViewer extends React.Component {
-
-    state = {
-        isPaused: false,
-        playlistOff: true
-    };
-
-    tooglePlaylist() {
-        this.setState({
-            plalistOff: !this.state.playlistOff
-        })
-    }
-
+class PlayerViewer extends Component {
 
     render() {
         return (
-            <Helper>
+            <SongProvider>
+
                 <Player
-                    playlistOn={this.playlistShowHandler}
-                    playlistOff={this.playlistHideHandler}
-                />
-                <PlayerSongsList show={this.state.playlistOn} playlistClose={this.playlistHideHandler}/>
-            </Helper>
+                    playlistShow={this.props.playlistShowHandler}
+                    playlistClose={this.props.playlistHideHandler}>
+
+                </Player>
+
+            </SongProvider>
         )
     }
 
 }
 
-export default withSongs(PlayerViewer)
+export default withLayout(withSongs(PlayerViewer))
