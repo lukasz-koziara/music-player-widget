@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 import './PlayerControls.css';
+import {withSongs} from "../../../contexts/Songs";
 
 class PlayerControls extends Component {
     state = {
         isPaused: false
     };
 
-    handleClick =() => {
+    handleClick = () => {
         this.setState({
             isPaused: !this.state.isPaused
         })
@@ -28,4 +29,4 @@ class PlayerControls extends Component {
 }
 ;
 
-export default PlayerControls
+export default withSongs(PlayerControls)

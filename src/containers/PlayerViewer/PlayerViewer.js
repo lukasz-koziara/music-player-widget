@@ -15,8 +15,9 @@ class PlayerViewer extends Component {
                 <Player
                     playlistShow={this.props.playlistShowHandler}
                     playlistClose={this.props.playlistHideHandler}>
+
                 </Player>
-                <PlayerSongsList show={this.props.isExpanded} playlistClose={this.props.playlistHideHandler}/>
+
             </SongProvider>
         )
     }
