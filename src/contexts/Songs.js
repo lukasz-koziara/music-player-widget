@@ -13,15 +13,6 @@ export class SongProvider extends Component {
             {id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07"},
             {id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24"}
         ],
-    isExpanded: true
-};
-
-    playlistShowHandler = () => {
-        this.setState({isExpanded: true})
-    };
-
-    playlistHideHandler = () => {
-        this.setState({isExpanded: false})
     };
 
     render() {
@@ -46,7 +37,7 @@ export function withSongs(Component) {
         )
     }
 
-    SongAwareComponent.displayName = `SongAware(${Component.displayName || Component.name || 'Component'})`
+    SongAwareComponent.displayName = `SongAware(${Component.displayName || Component.name || 'Component'})`;
 
     return SongAwareComponent
 }

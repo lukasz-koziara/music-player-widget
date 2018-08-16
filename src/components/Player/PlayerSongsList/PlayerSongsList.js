@@ -2,30 +2,36 @@ import React from 'react';
 import './PlayerSongsList.css';
 import {withSongs} from "../../../contexts/Songs";
 import {Scrollbars} from 'react-custom-scrollbars';
+import {withLayout} from "../../../contexts/Layout";
 
 
 const PlayerSongList = (props) => (
 
         <div className='PlayerSongList-SongListBody'
              style={{
-                 opacity: props.isExpanded ? '1' : '0'
+                 display: props.isExpanded ? 'block' : 'none'
              }}>
             <div className='PlayerSongList-PlaylistTitle'>
                 <button className='PlayerSongList-PlaylistBack'
-                        onClick={props.playlistHideHandler}/>
+                        onClick={this.playlistHideHandler}/>
                 <p>Playlist</p>
             </div>
             <div className={'PlayerSongList-List'}>
                 <Scrollbars style={{height: 360, width: 340}}>
                     {props.songs.map((song) =>
-                        <div key={song.id} className={'PlayerSongList-Song'}>
+                        <div
+                            key={song.id}
+                            id={song.id}
+                            className={'PlayerSongList-Song'}
+
+                        >
                             <div className={"PlayerSongList-SongInfo"}>
                                 <p className={'PlayerSongList-Duration-Artist'}>{song.duration} | {song.artist}</p>
                                 <p className={'PlayerSongList-Title'}>{song.title}</p>
                             </div>
                             <div className={'PlayerSongList-SongControls'}>
-                                <button className={"fas fa-share-alt PlayerSongList-Share"}></button>
-                                <button className={"fas fa-heart PlayerSongList-Like"}></button>
+                                <button className={"fas fa-share-alt PlayerSongList-Share"}/>
+                                <button className={"fas fa-heart PlayerSongList-Like"} onClick = {this.handleSongClick}/>
                             </div>
                             <div className={'PlayerSongList-Divider'}/>
                         </div>
@@ -37,4 +43,4 @@ const PlayerSongList = (props) => (
 
 );
 
-export default withSongs(PlayerSongList)
+export default withLayout(withSongs(PlayerSongList))

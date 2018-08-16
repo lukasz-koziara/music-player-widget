@@ -7,13 +7,21 @@ import PlayerSongsList from "../../components/Player/PlayerSongsList/PlayerSongs
 
 class PlayerViewer extends Component {
 
+    playlistShowHandler = () => {
+        this.setState({isExpanded: true})
+    };
+
+    playlistHideHandler = () => {
+        this.setState({isExpanded: false})
+    };
+
     render() {
         return (
             <SongProvider>
-                <PlayerSongsList show={this.state.isExpanded} playlistClose={this.playlistHideHandler}/>
+                <PlayerSongsList show={this.props.isExpanded} playlistClose={this.props.playlistHideHandler}/>
                 <Player
-                    playlistShow={this.playlistShowHandler}
-                    playlistClose={this.playlistHideHandler}>
+                    playlistShow={this.props.playlistShowHandler}
+                    playlistClose={this.props.playlistHideHandler}>
                 </Player>
             </SongProvider>
         )

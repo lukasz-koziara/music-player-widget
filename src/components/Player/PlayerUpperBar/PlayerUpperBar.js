@@ -5,10 +5,10 @@ import {withSongs} from "../../../contexts/Songs";
 
 const PlayerUpperBar = (props) => (
     <div className='PlayerUpperBar-BarBg'>
-        <button className='PlayerUpperBar-Repeat'></button>
-        <button className='PlayerUpperBar-Shuffle'></button>
-        <button className='PlayerUpperBar-Refresh'></button>
-        <button className='fas fa-bars PlayerUpperBar-Menu' onClick={props.playlistShowHandler}></button>
+        <button className='PlayerUpperBar-Repeat'/>
+        <button className='PlayerUpperBar-Shuffle'/>
+        <button className='PlayerUpperBar-Refresh'/>
+        <button className='fas fa-bars PlayerUpperBar-Menu' onClick={props.playlistShowHandler}/>
 
     </div>
 );
