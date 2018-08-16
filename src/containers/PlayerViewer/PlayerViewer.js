@@ -4,16 +4,9 @@ import './PlayerViewer.css';
 import {withSongs} from "../../contexts/Songs";
 import {SongProvider} from "../../contexts/Songs"
 import PlayerSongsList from "../../components/Player/PlayerSongsList/PlayerSongsList";
+import {withLayout} from "../../contexts/Layout";
 
 class PlayerViewer extends Component {
-
-    playlistShowHandler = () => {
-        this.setState({isExpanded: true})
-    };
-
-    playlistHideHandler = () => {
-        this.setState({isExpanded: false})
-    };
 
     render() {
         return (
@@ -29,4 +22,4 @@ class PlayerViewer extends Component {
 
 }
 
-export default withSongs(PlayerViewer)
+export default withLayout(withSongs(PlayerViewer))

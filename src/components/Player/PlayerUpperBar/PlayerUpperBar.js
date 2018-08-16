@@ -1,6 +1,8 @@
 import React from 'react';
 import './PlayerUpperBar.css';
 import {withSongs} from "../../../contexts/Songs";
+import {withLayout} from "../../../contexts/Layout";
+
 
 
 const PlayerUpperBar = (props) => (
@@ -13,4 +15,4 @@ const PlayerUpperBar = (props) => (
     </div>
 );
 
-export default withSongs(PlayerUpperBar)
+export default withLayout(withSongs(PlayerUpperBar))
