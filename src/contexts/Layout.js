@@ -9,11 +9,11 @@ export class LayoutProvider extends Component {
     state = {
         isExpanded: false,
 
-        playlistOn: playlistShowHandler = () => {
+         playlistShowHandler : () => {
             this.setState({isExpanded: true});
         },
 
-       playlistOff: playlistHideHandler = () => {
+        playlistHideHandler : () => {
             this.setState({isExpanded: false});
         }
 };

@@ -4,7 +4,6 @@ import {withSongs} from "../../../contexts/Songs";
 import {Scrollbars} from 'react-custom-scrollbars';
 import {withLayout} from "../../../contexts/Layout";
 
-
 const PlayerSongList = (props) => (
 
         <div className='PlayerSongList-SongListBody'
@@ -13,7 +12,7 @@ const PlayerSongList = (props) => (
              }}>
             <div className='PlayerSongList-PlaylistTitle'>
                 <button className='PlayerSongList-PlaylistBack'
-                        onClick={this.playlistHideHandler}/>
+                        onClick={props.playlistHideHandler}/>
                 <p>Playlist</p>
             </div>
             <div className={'PlayerSongList-List'}>
@@ -24,6 +23,7 @@ const PlayerSongList = (props) => (
                             id={song.id}
                             className={'PlayerSongList-Song'}
 
+
                         >
                             <div className={"PlayerSongList-SongInfo"}>
                                 <p className={'PlayerSongList-Duration-Artist'}>{song.duration} | {song.artist}</p>
@@ -31,7 +31,7 @@ const PlayerSongList = (props) => (
                             </div>
                             <div className={'PlayerSongList-SongControls'}>
                                 <button className={"fas fa-share-alt PlayerSongList-Share"}/>
-                                <button className={"fas fa-heart PlayerSongList-Like"} onClick = {this.handleSongClick}/>
+                                <button className={"fas fa-heart PlayerSongList-Like"}/>
                             </div>
                             <div className={'PlayerSongList-Divider'}/>
                         </div>
