@@ -1,20 +1,16 @@
 import React, {Component} from 'react'
-import './PlayerControls.css'
-
+import './PlayerControls.css';
 
 class PlayerControls extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isPaused: false
-        };
-        this.handleClick = this.handleClick.bind(this)
-    }
-    handleClick() {
+    state = {
+        isPaused: false
+    };
+
+    handleClick =() => {
         this.setState({
             isPaused: !this.state.isPaused
         })
-    }
+    };
     render() {
         return (
             <div className='PlayerControls-Content'>
