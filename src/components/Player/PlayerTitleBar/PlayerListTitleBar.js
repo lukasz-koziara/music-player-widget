@@ -4,8 +4,8 @@ import {withSongs} from "../../../contexts/Songs";
 
 const PlayerListTitleBar = () => (
     <div className='PlayerListTitleBar'>
-        <p className="PlayerListTitleBar-SongAuthor"></p>
-        <p className="PlayerListTitleBar-SongTitle"></p>
+        <p className="PlayerListTitleBar-SongAuthor"/>
+        <p className="PlayerListTitleBar-SongTitle"/>
     </div>
 );
 

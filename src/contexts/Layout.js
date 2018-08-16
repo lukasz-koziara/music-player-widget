@@ -5,19 +5,18 @@ const LayoutContext = createContext();
 export const LayoutConsumer = LayoutContext.Consumer;
 
 export class LayoutProvider extends Component {
+
     state = {
-        isExpanded: false
-    };
+        isExpanded: false,
 
-    playlistShowHandler = () => {
-        this.setState({isExpanded: true});
-        console.log()
-    };
+        playlistOn: playlistShowHandler = () => {
+            this.setState({isExpanded: true});
+        },
 
-    playlistHideHandler = () => {
-        this.setState({isExpanded: false});
-        console.log()
-    };
+       playlistOff: playlistHideHandler = () => {
+            this.setState({isExpanded: false});
+        }
+};
 
 
 render()
