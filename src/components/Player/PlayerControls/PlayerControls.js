@@ -4,7 +4,7 @@ import {withSongs} from "../../../contexts/Songs";
 
 const PlayerControls = (props) => {
     const song = props.songs.find(song => song.id === props.songId);
-    const max = props.songs.length;
+
     return (
 
         <div className='PlayerControls-Content'>
@@ -12,11 +12,7 @@ const PlayerControls = (props) => {
                 <button className={"fas fa-share-alt PlayerControls-Share"}/>
                 <button className={"fas fa-step-backward PlayerControls-Prev Control"}
                         onClick={() => {
-
                                 props.setSongId(song.id - 1);
-                            if (props.songId === 0) {
-                                props.setSongId(1)
-                            }
                         }}
                 />
                 <button
