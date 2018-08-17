@@ -4,7 +4,7 @@ import {withSongs} from "../../../contexts/Songs";
 
 const PlayerControls = (props) => {
     const song = props.songs.find(song => song.id === props.songId);
-
+    const songs = props.songs;
     return (
 
         <div className='PlayerControls-Content'>
@@ -23,7 +23,7 @@ const PlayerControls = (props) => {
                         onClick={() => {
                             props.setSongId(song.id + 1);
                         }}
-                        disabled={props.songId === 4}
+                        disabled={props.songId === songs.length - 1}
                 />
                 <button className={"fas fa-heart PlayerControls-Like"}/>
             </div>
