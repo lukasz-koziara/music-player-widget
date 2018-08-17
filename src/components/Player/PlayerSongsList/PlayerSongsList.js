@@ -23,7 +23,7 @@ const PlayerSongList = (props) => (
                         id={song.id}
                         className={'PlayerSongList-Song'}
                         onClick={() => {
-                            props.setSongId(song.id)
+                            props.setSongId(song.id);
                             props.playlistHideHandler()
                         }}
                     >
