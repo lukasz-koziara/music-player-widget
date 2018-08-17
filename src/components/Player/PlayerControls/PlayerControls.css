@@ -65,3 +65,7 @@ button:disabled {
     background-color: #ffff;
     border: 1px solid #60558f
 }
+
+.Control:disabled:active {
+    background-color: #88858f
+}
