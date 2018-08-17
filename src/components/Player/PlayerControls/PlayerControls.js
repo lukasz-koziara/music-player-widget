@@ -23,7 +23,7 @@ const PlayerControls = (props) => {
                         onClick={() => {
                             props.setSongId(song.id + 1);
                         }}
-                        disabled={props.songId <= songs.length}
+                        disabled={props.songId === songs.length - 1}
                 />
                 <button className={"fas fa-heart PlayerControls-Like"}/>
             </div>
