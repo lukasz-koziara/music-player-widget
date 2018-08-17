@@ -7,13 +7,13 @@ export const SongConsumer = SongContext.Consumer;
 export class SongProvider extends Component {
     state = {
         songs: [
-            { id: 1, title: "Still Don't Know", artist: "Icona Pop", duration: "3:16" },
-            { id: 2, title: "I Love It ", artist: "Icona Pop", duration: "2:35" },
-            { id: 3, title: "Girlfriend", artist: "Icona Pop", duration: "2:50" },
-            { id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07" },
-            { id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24" }
+            { id: 0, title: "Still Don't Know", artist: "Icona Pop", duration: "3:16" },
+            { id: 1, title: "I Love It ", artist: "Icona Pop", duration: "2:35" },
+            { id: 2, title: "Girlfriend", artist: "Icona Pop", duration: "2:50" },
+            { id: 3, title: "We Got The World", artist: "Icona Pop", duration: "3:07" },
+            { id: 4, title: "Nights Like This", artist: "Icona Pop", duration: "3:24" }
         ],
-        songId: 1,
+        songId: 0,
         isPaused: false,
         setSongId: (songId) => this.setState({ songId }),
         handleClick: () => this.setState({isPaused: !this.state.isPaused})

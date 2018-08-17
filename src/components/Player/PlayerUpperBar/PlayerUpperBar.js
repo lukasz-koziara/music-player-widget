@@ -4,7 +4,6 @@ import {withSongs} from "../../../contexts/Songs";
 import {withLayout} from "../../../contexts/Layout";
 
 
-
 const PlayerUpperBar = (props) => (
     <div className='PlayerUpperBar-BarBg'>
         <button className='PlayerUpperBar-Repeat'/>
