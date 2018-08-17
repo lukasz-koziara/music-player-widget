@@ -1,8 +1,8 @@
 import React from 'react';
 import './PlayerSongsList.css';
-import { withSongs } from "../../../contexts/Songs";
-import { Scrollbars } from 'react-custom-scrollbars';
-import { withLayout } from "../../../contexts/Layout";
+import {withSongs} from "../../../contexts/Songs";
+import {Scrollbars} from 'react-custom-scrollbars';
+import {withLayout} from "../../../contexts/Layout";
 
 const PlayerSongList = (props) => (
 
@@ -12,11 +12,11 @@ const PlayerSongList = (props) => (
          }}>
         <div className='PlayerSongList-PlaylistTitle'>
             <button className='PlayerSongList-PlaylistBack'
-                    onClick={props.playlistHideHandler} />
+                    onClick={props.playlistHideHandler}/>
             <p>Playlist</p>
         </div>
         <div className={'PlayerSongList-List'}>
-            <Scrollbars style={{ height: 360, width: 340 }}>
+            <Scrollbars style={{height: 360, width: 340}}>
                 {props.songs.map((song) =>
                     <div
                         key={song.id}
@@ -32,10 +32,10 @@ const PlayerSongList = (props) => (
                             <p className={'PlayerSongList-Title'}>{song.title}</p>
                         </div>
                         <div className={'PlayerSongList-SongControls'}>
-                            <button className={"fas fa-share-alt PlayerSongList-Share"} />
-                            <button className={"fas fa-heart PlayerSongList-Like"} />
+                            <button className={"fas fa-share-alt PlayerSongList-Share"}/>
+                            <button className={"fas fa-heart PlayerSongList-Like"}/>
                         </div>
-                        <div className={'PlayerSongList-Divider'} />
+                        <div className={'PlayerSongList-Divider'}/>
                     </div>
                 )}
             </Scrollbars>

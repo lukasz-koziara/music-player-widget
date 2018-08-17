@@ -24,6 +24,10 @@ button {
     padding: 0;
 }
 
+button:disabled {
+    background-color: #88858f;
+}
+
 .PlayerControls-Share {
     width: 13px;
     height: 13px;

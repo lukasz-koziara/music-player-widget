@@ -9,24 +9,23 @@ export class LayoutProvider extends Component {
     state = {
         isExpanded: false,
 
-         playlistShowHandler : () => {
+        playlistShowHandler: () => {
             this.setState({isExpanded: true});
         },
 
-        playlistHideHandler : () => {
+        playlistHideHandler: () => {
             this.setState({isExpanded: false});
         }
-};
+    };
 
 
-render()
-{
-    return (
-        <LayoutContext.Provider value={this.state}>
-            {this.props.children}
-        </LayoutContext.Provider>
-    )
-}
+    render() {
+        return (
+            <LayoutContext.Provider value={this.state}>
+                {this.props.children}
+            </LayoutContext.Provider>
+        )
+    }
 }
 
 export function withLayout(Component) {
