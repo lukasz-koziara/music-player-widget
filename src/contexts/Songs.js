@@ -13,12 +13,12 @@ export class SongProvider extends Component {
             { id: 4, title: "We Got The World", artist: "Icona Pop", duration: "3:07" },
             { id: 5, title: "Nights Like This", artist: "Icona Pop", duration: "3:24" }
         ],
-
-        songId: null,
-
+        songId: 1,
+        isPaused: false,
         setSongId: (songId) => this.setState({ songId }),
-        nextSong: (songId) => this.setState({songId} + 1),
-        prevSong: (songId) => this.set.state({songId} - 1)
+        handleClick: () => this.setState({isPaused: !this.state.isPaused})
+
+
     };
 
     render() {

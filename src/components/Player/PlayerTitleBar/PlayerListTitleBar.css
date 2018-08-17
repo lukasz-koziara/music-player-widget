@@ -6,3 +6,17 @@
     position: relative;
     top: 208px;
 }
+
+.PlayerListTitleBar-SongAuthor {
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+    top: 16px;
+}
+
+.PlayerListTitleBar-SongTitle {
+    position: relative;
+    top: 16px;
+    font-size: 14px;
+    color: #fff;
+}
